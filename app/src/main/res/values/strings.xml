@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BloodUnityApp</string>
+    <string name="slogan_splash">“No one has ever become poor by giving.”</string>
+    <string name="login_slogan">“No one has ever become poor by giving.”</string>
+    <string name="appname">BloodUnity</string>
+    <string name="EnterYourEmail">Email</string>
+    <string name="enterPass">Password</string>
+    <string name="loginBtn">LOGIN</string>
+    <string name="signupBtn">SIGNUP</string>
+    <string name="confirmPassword">ConfirmPassword</string>
+    <string name="phoneNumber">Enter mobile number</string>
+    <string name="signuppageforlogin">login</string>
+    <string name="signuppageaccount">Already have account?</string>
+    <string name="opendrawer">Open nevigation drawer</string>
+    <string name="closedrawer">close nevigation drawer\n</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="msg_token_fmt">FCM Token: %s</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="floatPhone">Emergency Call</string>
+    <string name="floatmap">Hospital Location</string>
+
+</resources>
