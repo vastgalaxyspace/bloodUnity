@@ -18,5 +18,20 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="floatPhone">Emergency Call</string>
     <string name="floatmap">Hospital Location</string>
+    <string name="guidelines">Blood Donor and Recipient Guidelines:\n\n
+        Blood Donor Guidelines:\n
+        1. Eligibility: Typically 17-75 years old, weighing at least 50 kg, and in good health.\n
+        2. Preparation: Stay hydrated, eat a healthy meal, avoid alcohol and caffeine, and ensure sufficient iron levels.\n
+        3. During Donation: The process takes about 10 minutes; approximately 500 ml of blood is collected.\n
+        4. Post-Donation: Rest, have a snack, avoid strenuous activities, and drink plenty of fluids for 24-48 hours.\n
+        5. Frequency: Whole blood can be donated every 56 days; platelets every 7 days; plasma every 28 days.\n\n
+        Blood Recipient Guidelines:\n
+        1. Eligibility: Based on medical need and determined by healthcare providers.\n
+        2. Safety: Blood is tested for infectious diseases and matched by type and Rh factor.\n
+        3. During Transfusion: Patients are monitored for reactions, and procedures are conducted under sterile conditions.\n
+        4. Post-Transfusion: Observation for any delayed reactions, with possible follow-up treatments.\n
+        5. Special Considerations: Some may require specially treated blood products like leukoreduced blood to reduce the risk of complications.
+    </string>
+
 
 </resources>

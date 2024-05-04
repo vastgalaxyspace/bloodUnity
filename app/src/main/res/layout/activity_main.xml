@@ -54,8 +54,10 @@
                     android:rowCount="3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.28">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/donate_cardview"
@@ -143,7 +145,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/hospital_cardview"
+                        android:id="@+id/guideline_cardview"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -169,7 +171,7 @@
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
                                 android:layout_gravity="center_horizontal"
-                                android:src="@drawable/hospital"
+                                android:src="@drawable/guidelines"
 
                                 />
 
@@ -178,7 +180,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="8dp"
-                                android:text="Hospitals"
+                                android:text="Guidlines"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -230,6 +232,18 @@
 
 
                 </GridLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="300dp"
+                    android:layout_height="201dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/rece"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gridlayoutadmin" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

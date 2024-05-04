@@ -86,7 +86,7 @@ public class Donardetail extends AppCompatActivity {
             public void onSuccess(Void unused) {
                 AlertDialog dialog = new AlertDialog.Builder(Donardetail.this)
                         .setTitle("Registration Successful")
-                        .setMessage("Data Saved")
+                        .setMessage("Wow!! You saves a life. Thank you for your donation.")
                         .setIcon(R.drawable.baseline_verified_24)
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {

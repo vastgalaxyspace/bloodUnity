@@ -29,11 +29,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Every Drop Counts Towards Tomorrow"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
 
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="25dp"
                 android:hint="Full Name">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -49,7 +60,7 @@
                 android:id="@+id/spinnerBloodType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="25dp"
                 android:entries="@array/blood_type_array" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -93,8 +104,15 @@
                 app:backgroundTint="@color/red"
                 app:cornerRadius="8dp" />
 
-        </LinearLayout>
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="322dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/rece" />
+
+        </LinearLayout>
     </ScrollView>
 
 

@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(MainActivity.this, DontateActivity.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 
@@ -106,9 +106,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(MainActivity.this, Receiver.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
+        cardView3 = findViewById(R.id.guideline_cardview);
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GuidelineActivity.class);
+                startActivity(intent);
+//                finish();
+            }
+        });
+
 
         cardView4=findViewById(R.id.notification_cardview);
         cardView4.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(MainActivity.this, NotificationHistoryActivity.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 
