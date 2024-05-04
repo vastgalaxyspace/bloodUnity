@@ -3,14 +3,17 @@ package com.example.bloodunityapp;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
@@ -81,7 +84,20 @@ public class Donardetail extends AppCompatActivity {
         myRef.push().setValue(donor).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Snackbar.make(save,"Data Saved",Snackbar.LENGTH_LONG).show();
+                AlertDialog dialog = new AlertDialog.Builder(Donardetail.this)
+                        .setTitle("Registration Successful")
+                        .setMessage("Data Saved")
+                        .setIcon(R.drawable.baseline_verified_24)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Navigate back to MainActivity after OK is clicked
+                                Intent intent = new Intent(Donardetail.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .show();
+
 
                 Random random = new Random();
                 LocalDateTime now = LocalDateTime.now();
@@ -93,11 +109,14 @@ public class Donardetail extends AppCompatActivity {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
                 String donationDateTimeStr = donationDateTime.format(formatter);
 
+                String notificationText = "Your blood donation is scheduled for " + donationDateTimeStr + ".";
+                NotificationHistory.addNotification(notificationText);
+
                 // Create a notification
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(Donardetail.this, CHANNEL_ID)
                         .setSmallIcon(R.drawable.baseline_notifications_24)
                         .setContentTitle("Blood Donation Schedule")
-                        .setContentText("Your blood donation is scheduled for " + donationDateTimeStr + ".")
+                        .setContentText(notificationText)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
 
@@ -105,6 +124,8 @@ public class Donardetail extends AppCompatActivity {
                 @SuppressLint("MissingPermission")
                 NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Donardetail.this);
                 notificationManager.notify(0, builder.build());
+
+
             }
         });
     }

@@ -33,7 +33,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    CardView cardView,cardView1;
+    CardView cardView,cardView1,cardView3,cardView4;
     Toolbar toolbar;
 
 
@@ -109,6 +109,18 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        cardView4=findViewById(R.id.notification_cardview);
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, NotificationHistoryActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 //        toolbar=findViewById(R.id.toolbar);
 //
 //        setSupportActionBar(toolbar);
@@ -160,6 +172,11 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //    }
+    }
+    @Override
+    public void onBackPressed() {
+        // Call the superclass method
+        super.onBackPressed();
     }
 
 
